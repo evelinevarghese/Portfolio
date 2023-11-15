@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: antiquewhite;
+    background: #09001d;
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px 10px;
+    background: transparent;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 3s;
+    margin-left: 35px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #752aec;
+}
+
+button {
+    width: 130px;
+    display: inline-flex;
+    justify-content: center;
+    height: 45px;
+    background: #752aec;
+    border: 2px solid #752aec;
+    outline: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    align-items: center;
+    transition: 1s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+    border: 2px solid black;
+    transform: translateY(-3px) scaleX(.9);
+}
+
+/* Add this style for the small profile image */
+.column-2.image img {
+    width: 200px; /* Set the width as needed */
+    height: 200px; /* Set the height as needed */
+    border-radius: 50%; /* Make it a circle by setting border-radius to 50% */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Add a subtle box shadow */
+}
+
+/* Add this margin to create space between the image and text */
+.column-2.image {
+    margin-left: auto; /* Align to the right side */
+}
+
+/* Add this media query for responsiveness */
+@media only screen and (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack the navigation links vertically */
+        align-items: center;
+    }
+
+    .navbar a {
+        margin-left: 0; /* Remove left margin for navigation links */
+        margin-bottom: 10px; /* Add some bottom margin for spacing */
+    }
+
+    .w3-container {
+        padding: 80px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .column-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .column-1,
+    .column-2.image {
+        width: 48%; /* Set the width as needed */
+        margin-bottom: 20px; /* Add some bottom margin for spacing */
+    }
+
+    .column-2.image img {
+        width: 100%; /* Make the image fill its container width */
+        height: auto; /* Maintain the aspect ratio */
+    }
+}
+/* Add this style for the social icons */
+.social-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #752aec;
+}
+
+.social-icons i:hover {
+    color: #fff;
+}
+/* Add this style for the social icons */
+.social-icons {
+    margin-top: 20px; /* Adjust spacing as needed */
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #752aec; /* Use your desired color */
+    border-radius: 50%;
+    margin-right: 10px; /* Adjust spacing between icons as needed */
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    background-color: #3a1f61; /* Change color on hover */
+}

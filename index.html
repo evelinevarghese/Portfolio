@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-w2RsXBXfB7QnMCg6epVbl5L/B7F5v9eBiK7riP1eNf3/NP5NGVTbW5WH38J8A9UZ" crossorigin="anonymous">
+
+   
+
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="logo"> </a>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+
+    <header class="w3-container w3-center" style="padding: 135px 30px" id="home">
+        <div class="column-container">
+            <div class="column-1">
+                <h1 class="w3-jumbo"><b>Eveline Varghese</b></h1>
+                <p>UI/UX designer | Full Stack Developer</p>
+                <button onclick="downloadResume()">
+                    <i class="fa fa-download"></i> Download Resume
+                </button>
+            </div>
+            <br><br>
+            <div class="column-2 image">
+                <img src="njan.jpeg" alt="Profile Image">
+            </div>
+
+            <div class="column-2 about">
+                <h2>About</h2>
+                <p>
+                    Hello, I'm Eveline Varghese, a dynamic UI/UX designer and full-stack developer
+                     with expertise in HTML, CSS, and JavaScript for crafting intuitive user interfaces.
+                      My backend proficiency includes SQL and Python, ensuring seamless integration for
+                       robust applications. My portfolio showcases projects that highlight my skills in 
+                       creating engaging user experiences and implementing efficient full-stack solutions.
+                        Let's connect and explore possibilities!
+                </p>
+                <!-- Inside the "About" section -->
+<div class="social-icons">
+    <a href="https://www.linkedin.com/in/eveline-varghese-1a538624b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Be7iufI9OSqq%2F%2BnOzxEj2Kg%3D%3D" class="social-icon" target="_blank" rel="noopener noreferrer" >
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://github.com/evelinevarghese" class="social-icon" target="_blank" rel="noopener noreferrer" >
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.behance.net/evelinevarghese2000" class="social-icon" target="_blank" rel="noopener noreferrer" >
+        <i class="fab fa-behance"></i>
+    </a>
+</div>
+
+            </div>
+           
+        </div>
+    </header>
+
+    <script>
+        function downloadResume() {
+            // Assuming "resume.pdf" is the name of your PDF file
+            const pdfUrl = 'https://drive.google.com/file/d/1NDdFeXEXxg6_qMk0XOpuQKQvXCQp1dtm/view?usp=sharing';
+    
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = pdfUrl;
+            link.target = '_blank'; // Open the link in a new tab
+            link.download = 'resume.pdf'; // Specify the name of the downloaded file
+    
+            // Append the link to the document and trigger a click event
+            document.body.appendChild(link);
+            link.click();
+    
+            // Remove the link from the document
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
